@@ -1,2 +1,2 @@
-# VariableNameConversionPlugin
-变量名称转换插件
+# CodeStyleConversionPlugin
+代码风格转换插件
