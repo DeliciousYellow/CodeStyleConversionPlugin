@@ -1,0 +1,27 @@
+<!-- Plugin Configuration File -->
+<idea-plugin>
+    <!-- 插件唯一 ID，建议使用包名形式，不能随意改动 -->
+    <id>org.delicious.VariableNameConversionPlugin</id>
+
+    <!-- 插件名称（在 Plugins 页面中展示） -->
+    <name>Variable Name Conversion</name>
+
+    <!-- 插件作者信息 -->
+    <vendor email="delicious_blood@qq.com" url="https://www.delicious-blood.cn">Delicious</vendor>
+
+    <!-- 插件描述 -->
+    <description><![CDATA[
+        提供 IntelliJ 后缀模板支持，可将驼峰命名（camelCase）转换为全大写下划线风格（UPPER_SNAKE_CASE）。<br>
+        使用方式：在变量后输入 `.snake` 并按下 Tab 即可自动替换为常量格式。<br><br>
+        示例：<br>
+        <code>userName.snake</code> → <code>USER_NAME</code>
+    ]]></description>
+
+    <!-- 插件依赖核心 IntelliJ 平台模块 -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- 扩展点注册 -->
+    <extensions defaultExtensionNs="com.intellij">
+        <postfixTemplateProvider implementation="org.delicious.plugin.DeliciousPostfixTemplateProvider"/>
+    </extensions>
+</idea-plugin>
