@@ -1,0 +1,41 @@
+<!-- Plugin Configuration File -->
+<idea-plugin>
+    <!-- 插件唯一 ID，建议使用包名形式，不能随意改动 -->
+    <id>org.delicious.CodeStyleConversion</id>
+
+    <!-- 插件名称（在 Plugins 页面中展示） -->
+    <name>CodeStyleConversion</name>
+
+    <!-- 插件作者信息 -->
+    <vendor email="delicious_blood@qq.com" url="https://www.delicious-blood.cn">Delicious</vendor>
+
+    <!-- 插件描述 -->
+    <description><![CDATA[
+        提供 IntelliJ 后缀模板支持，快速将变量、方法、类等命名风格进行转换。支持以下格式：<br><br>
+        <ul>
+            <li><b>.snake</b> → 全大写下划线（UPPER_SNAKE_CASE）</li>
+            <li><b>.kebab</b> → 连字符小写（kebab-case）</li>
+            <li><b>.camel</b> → 小驼峰命名（camelCase）</li>
+            <li><b>.pascal</b> → 大驼峰命名（PascalCase）</li>
+        </ul>
+        使用方式：在变量、方法或类名后输入相应后缀并按下 Tab 键，即可自动重命名。<br><br>
+        示例：<br>
+        <code>userName.snake</code> → <code>USER_NAME</code><br>
+        <code>user_name.camel</code> → <code>userName</code><br>
+        <code>user_name.pascal</code> → <code>UserName</code><br>
+        <code>userName.kebab</code> → <code>user-name</code><br>
+    ]]></description>
+
+
+    <!-- 插件依赖核心 IntelliJ 平台模块 -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <!-- 扩展点注册 -->
+    <extensions defaultExtensionNs="com.intellij">
+        <codeInsight.template.postfixTemplateProvider language="JAVA"
+                                                      implementationClass="org.delicious.plugin.provider.DeliciousPostfixTemplateProvider"/>
+    </extensions>
+
+
+</idea-plugin>
