@@ -6,6 +6,6 @@ import org.delicious.plugin.util.ConvertUtils;
 
 public class ToPascalTemplate extends RenameTemplate {
     public ToPascalTemplate(PostfixTemplateProvider provider) {
-        super("toPascalCase", ".pascal", "SNAKE_CASE.pascal → SnakeCase", provider, ConvertUtils::toPascalCase);
+        super("toPascalCase", ".pascal (hello_world → HelloWorld)", "hello_world.pascal → HelloWorld", provider, ConvertUtils::toPascalCase);
     }
 }

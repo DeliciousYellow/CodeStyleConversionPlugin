@@ -5,6 +5,6 @@ import org.delicious.plugin.util.ConvertUtils;
 
 public class ToCamelTemplate extends RenameTemplate {
     public ToCamelTemplate(PostfixTemplateProvider provider) {
-        super("toCamelCase", ".camel", "SNAKE_CASE.camel → snakeCase", provider, ConvertUtils::toCamelCase);
+        super("toCamelCase", ".camel (hello_world → helloWorld)", "hello_world.camel → helloWorld", provider, ConvertUtils::toCamelCase);
     }
 }

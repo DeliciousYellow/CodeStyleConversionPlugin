@@ -4,7 +4,7 @@ public class ConvertUtils {
 
     /**
      * 驼峰转蛇形（大写）
-     * 例：camelCase → CAMEL_CASE
+     * 例：helloWorld → HELLO_WORLD
      */
     public static String toSnakeCase(String input) {
         return separateWords(input, "_").toUpperCase();
@@ -12,7 +12,7 @@ public class ConvertUtils {
 
     /**
      * 驼峰转连字符（小写）
-     * 例：camelCase → camel-case
+     * 例：helloWorld → hello-world
      */
     public static String toKebabCase(String input) {
         return separateWords(input, "-").toLowerCase();
