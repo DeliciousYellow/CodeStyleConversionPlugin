@@ -1,2 +1,2 @@
 # CodeStyleConversionPlugin
-IDEA的代码风格转换插件
+IDEA的变量名称转换插件
